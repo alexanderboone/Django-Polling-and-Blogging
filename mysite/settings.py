@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'sslserver',
     'polling',
     'blogging',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
